@@ -1,0 +1,272 @@
+:root {
+    --white: white;
+    --gray: rgb(240, 240, 240);
+    --black: rgb(37, 37, 37);
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans', cursive;
+}
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #f3fcfd26;
+}
+header p, header li {
+    color: var(--white);
+}
+header > div {
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+#logo {
+    background-image: url(../img/step-logo.svg);
+    display: inline;
+    float: left;
+    min-height: 2em;
+    min-width: 2em;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+#logo + p {
+    display: inline;
+}
+#logo, #logo + p {
+    vertical-align: bottom;
+}
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header nav li {
+    margin: 1em;
+}
+#banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/banner.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    filter: contrast(0.6);
+    background-size: cover;
+    z-index: -1;
+}
+#banner{
+    height: 90vh;
+    text-align: center;
+}
+#banner button {
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    display: block;
+    min-width: max-content;
+    border-radius: 1em;
+    padding: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 1.25em;
+    background: #000000d1;
+    color: white;
+    border: none;
+    box-shadow: #496D7A 0px 1px 8px;
+    cursor:pointer;
+}
+#banner button:hover{
+    background: #000000;
+}
+#servicos {
+    margin-bottom: 2em;
+}
+#servicos h3 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em;
+}
+#servicos > div {
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    min-width: 10.76em;
+    min-height: 20em; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    gap: 1em;
+    grid: var(--gray);
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(11em, 11em));
+    grid-template-rows: repeat(auto-fit, minmax(12.5em, 12.5em));
+    justify-content: center;
+}
+.servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    text-align: center;
+    min-width: 11em;
+    min-height: 12.5em;
+    background-color: var(--gray);
+    border-radius: 1em;
+}
+.servicos > div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 60%;
+}
+.servicos p{
+    margin: 1em;
+    font-weight: bold;
+}
+.servicos button {
+    border-radius: 20px;
+    background: #000000d1;
+    color: white;
+    border: none;
+    box-shadow: #496D7A 0px 1px 8px;
+    cursor:pointer;
+    padding: 5px 9px;
+    font-size: 18px;
+    max-width: max-content;
+}
+#contato {
+    background-color: var(--gray);
+    color: var(--white);
+    padding: 3em;
+}
+#contato h3{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+#contato form {
+    background-color: var(--black);
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1em;
+    text-align: center;
+}
+#contato form > div {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+#contato form .campo {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+}
+#contato form .campo label {
+    flex: 1;
+    text-align: left;
+    font-weight: bold;
+}
+#contato form .campo input, 
+#contato form .campo select {
+    min-width: 200px;
+}
+#contato form .campo input, 
+#contato form .campo select, 
+#contato form .campo textarea {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex: 3;
+    border-radius: 1em;
+}
+#contato form .campo:nth-child(4) {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#contato form .campo:nth-child(4) label {
+    text-align: center;
+}
+#contato form .campo textarea {
+    width: 100%;
+}
+#contato form button {
+    display: block;
+    margin: 0 auto;
+    min-height: 28.39px;
+    min-width: 28.39px;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+footer {
+    text-align: center;
+}
+@media screen and (max-width: 850px) {
+    /* * {
+        min-width: min-content;
+    } */
+    #contato form > div {
+        display: inherit;
+        width: inherit;
+    }
+    #contato form .campo input, 
+    #contato form .campo select {
+        min-width: inherit;
+    }
+    #contato form .campo {
+        display: flex;
+        margin: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        flex-direction: column;
+        align-items: center;
+    }
+    #contato form .campo label {
+        flex: 1;
+        text-align: right;
+        font-weight: bold;
+
+        text-align: center;
+    }
+    #contato form .campo input, 
+    #contato form .campo select, 
+    #contato form .campo textarea {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        flex: 3;
+        margin-left: 1em;
+        margin-right: 1em;
+
+        width: 90%;
+    }
+    #contato form .campo textarea {
+        width: 100%;
+    }
+} 
