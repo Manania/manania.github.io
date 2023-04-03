@@ -94,6 +94,7 @@ aside {
     flex: 29%;
 }
 aside section {
+    margin-top: 1em;
     padding-left: 1em;
     /* background-color: rgba(187, 187, 187, 0.983); */
     background: rgb(217,217,217);
@@ -136,6 +137,8 @@ form input[type='submit'] {
     box-sizing: border-box;
     border-radius: 1em;
     margin: 1em;
+    flex: 0;
+    padding: 1em;
 }
 #comentario header article  header a{
     color: black;
